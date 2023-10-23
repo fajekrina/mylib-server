@@ -8,6 +8,7 @@ import { bookManagementRouter } from "./src/routers/bookManagement";
 import { memberManagementRouter } from "./src/routers/memberManagement";
 import { rentManagementRouter } from "./src/routers/rentManagement";
 import { returnManagementRouter } from "./src/routers/returnManagement";
+import { authManagementRouter } from "./src/routers/authManagement";
 
 //For env File
 dotenv.config();
@@ -26,6 +27,7 @@ app.use(bookManagementRouter);
 app.use(memberManagementRouter);
 app.use(rentManagementRouter);
 app.use(returnManagementRouter);
+app.use(authManagementRouter);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Welcome to Express & TypeScript Server");
